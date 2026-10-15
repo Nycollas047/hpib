@@ -86,7 +86,7 @@ You do not need to send us anything. Data, code and results stay with you.
 
 ## Contributing and license
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). The license still has to be confirmed by the author (proposal D-01: Apache-2.0 for code and schemas, CC BY 4.0 for documents and tasks). Until then, no reuse rights are granted.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). Licensed under the [Apache License 2.0](LICENSE) (decision D-01), covering code, schemas, documents and tasks.
 
 ## Notices
 

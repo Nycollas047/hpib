@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/hpib/schemas/telemetry-event.schema.json",
+  "$id": "https://raw.githubusercontent.com/Nycollas047/hpib/main/schemas/telemetry-event.schema.json",
   "title": "HPIB telemetry event",
   "description": "One line of the JSONL telemetry log. Records what happened and at which verification level it is evidenced. A command being sent (V1) never proves the physical response (V3).",
   "type": "object",

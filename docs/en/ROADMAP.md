@@ -19,11 +19,11 @@ For modding (phase 5), two complementary strategies, neither presumed superior: 
 
 ## Proposed decisions
 
-Initial answers to the v0.1 open questions. Status: **Proposed** (to be confirmed by the author) or **Open**.
+Initial answers to the v0.1 open questions. Status: **Decided**, **Proposed** (to be confirmed by the author) or **Open**.
 
 | ID | Question | Proposal | Status |
 |---|---|---|---|
-| D-01 | License | Apache-2.0 for code and schemas; CC BY 4.0 for documents and tasks | Open |
+| D-01 | License | Apache-2.0 for everything (code, schemas, documents, tasks) | Decided |
 | D-02 | Governance | Single maintainer at first; changes via RFC in issues; committee once there are ≥ 3 external maintainers | Proposed |
 | D-03 | Technology | Mandatory Web track + optional Native track | Proposed; confirm in Phase 1 |
 | D-04 | Reference device | One generic gamepad (Web) + one of DualSense and Steam Controller 2026, chosen in Phase 1 by the criterion of documented haptics access | Open |

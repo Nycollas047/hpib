@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/hpib/schemas/capability-descriptor.schema.json",
+  "$id": "https://raw.githubusercontent.com/Nycollas047/hpib/main/schemas/capability-descriptor.schema.json",
   "title": "HPIB device capability descriptor",
   "description": "What a Device Adapter must publish. A capability is 'supported' only after a functional check succeeded.",
   "type": "object",

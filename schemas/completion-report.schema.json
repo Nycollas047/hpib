@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/hpib/schemas/completion-report.schema.json",
+  "$id": "https://raw.githubusercontent.com/Nycollas047/hpib/main/schemas/completion-report.schema.json",
   "title": "HPIB completion report",
   "description": "Written by the agent under test. Every claim names the verification level it asserts and points to evidence, so the auditor can compare claims with what was actually evidenced (dimension D5).",
   "type": "object",

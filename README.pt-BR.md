@@ -86,7 +86,7 @@ Você não precisa nos enviar nada. Dados, código e resultados permanecem com v
 
 ## Contribuir e licença
 
-Ver [`CONTRIBUTING.md`](CONTRIBUTING.md). A licença ainda precisa ser confirmada pelo autor (proposta D-01: Apache-2.0 para código e esquemas, CC BY 4.0 para documentos e tarefas). Até lá, nenhum direito de reutilização é concedido.
+Ver [`CONTRIBUTING.md`](CONTRIBUTING.md). Licenciado sob a [Apache License 2.0](LICENSE) (decisão D-01), cobrindo código, esquemas, documentos e tarefas.
 
 ## Avisos
 

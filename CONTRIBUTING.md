@@ -22,7 +22,7 @@ HPIB is a draft specification. The most valuable contributions right now are cri
 2. Do not commit private held-out variants, hidden tests or anything under NDA.
 3. Hardware claims need evidence at a stated verification level (V0–V4).
 4. Keep English and Portuguese documents equivalent; if you change one, change or flag the other.
-5. By contributing you agree your work is released under the project license (decision D-01, pending).
+5. By contributing you agree your work is released under the project license (Apache-2.0, decision D-01).
 
 ## Português
 
@@ -44,4 +44,4 @@ O HPIB é uma especificação em rascunho. As contribuições mais úteis agora 
 2. Não envie variantes privadas de retenção, testes ocultos nem nada sob NDA.
 3. Afirmações sobre hardware exigem evidência em um nível de verificação declarado (V0–V4).
 4. Mantenha os documentos em inglês e português equivalentes; se alterar um, altere ou sinalize o outro.
-5. Ao contribuir, você concorda que seu trabalho seja liberado sob a licença do projeto (decisão D-01, pendente).
+5. Ao contribuir, você concorda que seu trabalho seja liberado sob a licença do projeto (Apache-2.0, decisão D-01).

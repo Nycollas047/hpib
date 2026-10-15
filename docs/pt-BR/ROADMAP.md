@@ -19,11 +19,11 @@ Para *modding* (fase 5), duas estratégias complementares e nenhuma presumida su
 
 ## Decisões propostas
 
-Respostas iniciais para as questões em aberto da v0.1. Status: **Proposta** (a confirmar pelo autor) ou **Aberta**.
+Respostas iniciais para as questões em aberto da v0.1. Status: **Decidida**, **Proposta** (a confirmar pelo autor) ou **Aberta**.
 
 | ID | Questão | Proposta | Status |
 |---|---|---|---|
-| D-01 | Licença | Apache-2.0 para código e esquemas; CC BY 4.0 para documentos e tarefas | Aberta |
+| D-01 | Licença | Apache-2.0 para tudo (código, esquemas, documentos, tarefas) | Decidida |
 | D-02 | Governança | Mantenedor único no início; mudanças por RFC em *issues*; comitê quando houver ≥ 3 mantenedores externos | Proposta |
 | D-03 | Tecnologia | Trilha Web obrigatória + trilha Nativa opcional | Proposta; confirmar na Fase 1 |
 | D-04 | Dispositivo de referência | Um gamepad genérico (Web) + um entre DualSense e Steam Controller 2026, escolhido na Fase 1 pelo critério de acesso documentado à háptica | Aberta |
