@@ -92,4 +92,4 @@ Ver [`CONTRIBUTING.md`](CONTRIBUTING.md). Licenciado sob a [Apache License 2.0](
 
 HPIB é um projeto independente, sem vínculo com os fabricantes citados. Steam Controller, Valve, DualSense, PlayStation, Sony e demais nomes são marcas de seus respectivos titulares, usadas apenas para identificar dispositivos. Uma pontuação no HPIB não certifica produto nem demonstra eficácia clínica.
 
-**Contato:** `[nome e contato do autor]`
+**Contato:** Nycollas Augusto Modesto de Carvalho, <nycollas_augusto@hotmail.com>

@@ -21,4 +21,4 @@ Out of scope for v0.x. HPIB does not certify medical devices or demonstrate clin
 
 ## Reporting problems
 
-Safety flaws in the kit (for example a procedure that could damage a device) should be reported privately to the author before public disclosure: `[author contact]`.
+Safety flaws in the kit (for example a procedure that could damage a device) should be reported privately to the author before public disclosure: nycollas_augusto@hotmail.com.

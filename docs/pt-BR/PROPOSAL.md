@@ -84,4 +84,4 @@ Até onde sabemos, e sujeito a revisão sistemática da literatura ainda não fe
 
 ## 10. Contato
 
-`[nome, e-mail ou perfil do autor]`
+Nycollas Augusto Modesto de Carvalho, <nycollas_augusto@hotmail.com>

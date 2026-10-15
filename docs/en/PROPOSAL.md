@@ -84,4 +84,4 @@ To our knowledge, and subject to a systematic literature review not yet done, no
 
 ## 10. Contact
 
-`[author name, e-mail or profile]`
+Nycollas Augusto Modesto de Carvalho, <nycollas_augusto@hotmail.com>

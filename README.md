@@ -92,4 +92,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). Licensed under the [Apache License 2.0
 
 HPIB is an independent project with no affiliation with the manufacturers mentioned. Steam Controller, Valve, DualSense, PlayStation, Sony and other names are trademarks of their respective owners, used only to identify devices. An HPIB score does not certify a product or demonstrate clinical efficacy.
 
-**Contact:** `[author name and contact]`
+**Contact:** Nycollas Augusto Modesto de Carvalho, <nycollas_augusto@hotmail.com>

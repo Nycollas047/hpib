@@ -21,4 +21,4 @@ Fora do escopo da v0.x. O HPIB não certifica dispositivos médicos nem demonstr
 
 ## Relato de problemas
 
-Falhas de segurança no kit (por exemplo, um procedimento que possa danificar um dispositivo) devem ser reportadas ao autor de forma privada antes de divulgação pública: `[contato do autor]`.
+Falhas de segurança no kit (por exemplo, um procedimento que possa danificar um dispositivo) devem ser reportadas ao autor de forma privada antes de divulgação pública: nycollas_augusto@hotmail.com.
