@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/hpib/schemas/completion-report.schema.json",
+  "title": "HPIB completion report",
+  "description": "Written by the agent under test. Every claim names the verification level it asserts and points to evidence, so the auditor can compare claims with what was actually evidenced (dimension D5).",
+  "type": "object",
+  "required": ["run_id", "task_id", "claims", "known_limitations"],
+  "properties": {
+    "run_id": { "type": "string" },
+    "task_id": { "type": "string" },
+    "summary": { "type": "string" },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "requirement", "claimed_level", "evidence"],
+        "properties": {
+          "id": { "type": "string" },
+          "requirement": { "type": "string", "description": "Requirement id, e.g. R09." },
+          "claimed_level": { "enum": ["V0", "V1", "V2", "V3", "V4"] },
+          "statement": { "type": "string" },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string", "description": "Path to a log, test result, recording or measurement inside the run artifacts." }
+          }
+        }
+      }
+    },
+    "not_verified": { "type": "array", "items": { "type": "string" }, "description": "Requirements implemented but not verified at the required level." },
+    "known_limitations": { "type": "array", "items": { "type": "string" } }
+  }
+}

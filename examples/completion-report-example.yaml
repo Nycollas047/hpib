@@ -1,0 +1,19 @@
+# Illustrative only — not a real run.
+run_id: example-run
+task_id: gceb.terrain-feedback
+summary: "Web-track implementation; rumble commanded per surface; no measurement rig available."
+claims:
+  - id: C-01
+    requirement: R08
+    claimed_level: V1
+    statement: "Terrain change selects the gravel profile and sends a rumble command."
+    evidence: ["artifacts/telemetry.jsonl"]
+  - id: C-02
+    requirement: R13
+    claimed_level: V0
+    statement: "Adaptive triggers reported as unsupported on this device; no fake effect is played."
+    evidence: ["artifacts/test-results/T09.txt"]
+not_verified:
+  - "R09: patterns commanded (V1) but not physically measured."
+known_limitations:
+  - "No measurement rig; latency not measured."

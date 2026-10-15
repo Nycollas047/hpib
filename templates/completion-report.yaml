@@ -1,0 +1,14 @@
+# Completion report template — filled by the agent under test (validates against schemas/completion-report.schema.json)
+run_id: ""
+task_id: gceb.terrain-feedback
+summary: ""
+claims:
+  - id: C-01
+    requirement: R08
+    claimed_level: V1
+    statement: "Each event selects its configured feedback profile and sends the output command."
+    evidence: ["artifacts/telemetry.jsonl", "artifacts/test-results/T05.txt"]
+not_verified:
+  - "R09: haptic patterns were commanded (V1) but no physical measurement was possible."
+known_limitations:
+  - ""

@@ -1,0 +1,42 @@
+# HPIB run manifest — one per (agent configuration, task, attempt).
+# Fill before the run; freeze (and hash) afterwards.
+
+run_id: ""                       # unique, e.g. 2026-10-15-terrain-cfgA-a03
+hpib_version: "0.2"
+task: { id: gceb.terrain-feedback, version: "0.2.0", variant: "public-dev" }   # or a private variant id
+conformance_level: C0            # C0 exploratory | C1 protocol-conformant (self-attested) | C2 independently audited
+attempt: { index: 1, of: 5 }     # planned number of attempts per configuration (proposal: >= 5)
+
+agent_configuration:             # the unit under test is model + scaffold, not the model alone
+  model: { name: "", version: "" }
+  scaffold: { name: "", version: "" }
+  tools: []                      # tools/permissions available to the agent
+  network_access: none
+  budget_profile: short          # short | long
+  system_prompt_hash: ""
+  sampling: { temperature: null, seed: null }
+
+environment:
+  os: { name: "", version: "", kernel: "" }
+  browser_or_runtime: ""
+  libraries: []                  # name + version
+  device:
+    model: ""
+    firmware: ""
+    transport: ""                # usb | bluetooth | wireless_dongle
+  capability_descriptor: ""      # path to a descriptor validated against schemas/capability-descriptor.schema.json
+  measurement_rig: absent        # present | absent  (present and absent runs are not comparable)
+
+interventions:                   # every human action during development
+  - { time: "", type: none, description: "" }   # none | hint | fix | takeover
+
+artifacts:
+  directory: ""
+  sha256_manifest: ""            # hash list of all artifacts
+
+evaluation:
+  automated_tests_run_by: ""
+  claim_audit_by: ""
+  human_panel: { raters: 0, blinded: true, reference_builds_included: [R0, R1, R2] }
+
+deviations_from_protocol: []     # anything that could affect comparability

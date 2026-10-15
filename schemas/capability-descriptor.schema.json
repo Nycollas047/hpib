@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/hpib/schemas/capability-descriptor.schema.json",
+  "title": "HPIB device capability descriptor",
+  "description": "What a Device Adapter must publish. A capability is 'supported' only after a functional check succeeded.",
+  "type": "object",
+  "required": ["device_id", "adapter", "transport", "os", "capabilities"],
+  "properties": {
+    "device_id": { "type": "string", "description": "Vendor/product identifier or stable label." },
+    "adapter": { "type": "object", "required": ["name", "version"], "properties": { "name": { "type": "string" }, "version": { "type": "string" } } },
+    "transport": { "enum": ["usb", "bluetooth", "wireless_dongle", "other"] },
+    "os": { "type": "string" },
+    "firmware": { "type": "string" },
+    "libraries": { "type": "array", "items": { "type": "string" }, "description": "Drivers/libraries used, with versions." },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["state"],
+        "properties": {
+          "state": {
+            "enum": ["supported", "unsupported", "unavailable", "unverified"],
+            "description": "supported = identified and functionally verified; unsupported = device lacks it; unavailable = device has it but this stack/permissions cannot reach it; unverified = claimed but not yet functionally checked."
+          },
+          "access_path": { "type": "string", "description": "e.g. kernel evdev, SDL, Steam Input, WebHID, Gamepad API." },
+          "verified_level": { "enum": ["V0", "V1", "V2", "V3", "V4"] },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  }
+}

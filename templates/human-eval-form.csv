@@ -1,0 +1,9 @@
+session_id,rater_id,build_code,scenario_id,repetition,criterion_id,score_1_5,discomfort_flag,comment
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C1,,false,
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C2,,false,
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C3,,false,
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C4,,false,
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C5,,false,
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C6,,false,
+S001,P01,B-7F3A,SC-GRAVEL-01,1,C7,,false,
+S001,P01,B-7F3A,SC-IDTEST-01,1,H-ID,,false,

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/hpib/schemas/telemetry-event.schema.json",
+  "title": "HPIB telemetry event",
+  "description": "One line of the JSONL telemetry log. Records what happened and at which verification level it is evidenced. A command being sent (V1) never proves the physical response (V3).",
+  "type": "object",
+  "required": ["t_mono_ns", "run_id", "task_id", "event", "source", "result", "verification_level"],
+  "additionalProperties": true,
+  "properties": {
+    "t_mono_ns": { "type": "integer", "minimum": 0, "description": "Monotonic timestamp in nanoseconds." },
+    "clock_source": { "type": "string", "description": "Clock used (e.g. CLOCK_MONOTONIC, performance.now, rig_clock)." },
+    "run_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "event": { "type": "string", "minLength": 1, "description": "Event type, e.g. terrain_changed, haptic_command, haptic_verification." },
+    "source": { "enum": ["simulation", "adapter", "feedback_engine", "device", "rig", "harness", "human"] },
+    "sim_state": { "type": "object", "description": "Relevant simulation state at the event time." },
+    "capability": { "type": "string", "description": "Capability used, e.g. rumble, imu, adaptive_triggers." },
+    "profile": { "type": "string", "description": "Feedback profile applied, e.g. gravel." },
+    "result": { "enum": ["ok", "sent", "verified", "unverified", "failed", "unsupported", "unavailable"] },
+    "verification_level": { "enum": ["V0", "V1", "V2", "V3", "V4"] },
+    "error_code": { "type": "string" }
+  }
+}
