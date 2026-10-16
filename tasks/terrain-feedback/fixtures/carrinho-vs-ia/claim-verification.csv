@@ -1,0 +1,2 @@
+claim_id,event_or_surface,claim_text,claimed_level,human_verdict,perceived_description,rater_id,build_code,discomfort_flag,comment
+C-001,asfalto,"Example: asphalt gives a very light, steady hum",V1,,,,,,

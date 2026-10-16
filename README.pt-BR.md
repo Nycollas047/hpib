@@ -63,6 +63,7 @@ Cada requisito exige um nível mínimo de evidência. Um recurso só conta no n�
 | [`docs/pt-BR/SAFETY-AND-ETHICS.md`](docs/pt-BR/SAFETY-AND-ETHICS.md) | Segurança de hardware, de código gerado e de participantes |
 | [`docs/pt-BR/ROADMAP.md`](docs/pt-BR/ROADMAP.md) | Fases e decisões propostas (D-01 a D-12) |
 | [`tasks/terrain-feedback/task.yaml`](tasks/terrain-feedback/task.yaml) | Primeira tarefa, legível por máquina |
+| [`tasks/terrain-feedback/fixtures/carrinho-vs-ia/`](tasks/terrain-feedback/fixtures/carrinho-vs-ia/README.pt-BR.md) | Fixture de consertar e melhorar: um jogo pequeno que a IA deve consertar e cujo feedback háptico um humano deve verificar |
 | [`schemas/`](schemas/) | Esquemas JSON de telemetria, capacidades e relatório de conclusão |
 | [`templates/`](templates/) · [`examples/`](examples/) | Manifesto de execução, formulário humano, relatório e exemplos |
 | [`CHANGELOG.md`](CHANGELOG.md) | O que mudou em relação à v0.1 e por quê |

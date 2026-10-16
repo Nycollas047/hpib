@@ -1,0 +1,15 @@
+{
+  "name": "carrinho-vs-ia",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Corrida de coleta de moedas contra uma IA. Three.js, low-poly, controle PS5.",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test tests/logic.test.js tests/controle.test.js tests/haptics.test.js && node tests/visual.smoke.mjs",
+    "analise": "node tools/map-analysis.mjs"
+  },
+  "dependencies": {
+    "three": "0.160.0"
+  }
+}
