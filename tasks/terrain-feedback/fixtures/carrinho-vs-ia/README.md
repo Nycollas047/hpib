@@ -80,14 +80,16 @@ An AI that claims V4 for a sensation the human `refuted` is penalised in **claim
 ```bash
 npm install
 npm test            # baseline logic tests and mesh checks
-npm start           # local server; open it in Chrome or Edge
+npm start           # local server on http://localhost:5173; open it in Chrome or Edge
 ```
 
-Haptics need a controller (WebHID needs USB, a secure context and explicit permission). Details and diagnostics: [`GAME-README.pt-BR.md`](GAME-README.pt-BR.md) (Portuguese).
+Three.js is vendored in `vendor/` (MIT, see `vendor/THREE-LICENSE`), so the game runs fully offline. Haptics need a controller (WebHID needs USB, a secure context and explicit permission). Details and diagnostics: [`GAME-README.pt-BR.md`](GAME-README.pt-BR.md) (Portuguese).
 
 ## Baseline and limits
 
+- Machine-readable definition: [`task.yaml`](task.yaml) (extends the parent task; scores R07, R08, R09, R10, R12, R13, R15).
 - Imported as **v3** of the game. At import, `npm test` passes (46 tests). Passing tests do not mean the feedback is correct.
+- **The code has known defects**, on purpose and not listed. Finding them is part of the task.
 - Haptic feedback was **never validated on hardware** by its author.
 - The game documentation is in Portuguese; the code comments too.
 - This is a public development set. Official comparisons should use private variants (decision D-08). Do not commit solutions or human-evaluation data here.
