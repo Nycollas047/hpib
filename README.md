@@ -64,6 +64,7 @@ Each requirement demands a minimum level of evidence. A capability counts only a
 | [`docs/en/ROADMAP.md`](docs/en/ROADMAP.md) | Phases and proposed decisions (D-01 to D-12) |
 | [`tasks/terrain-feedback/task.yaml`](tasks/terrain-feedback/task.yaml) | First task, machine-readable |
 | [`tasks/terrain-feedback/fixtures/carrinho-vs-ia/`](tasks/terrain-feedback/fixtures/carrinho-vs-ia/) | Repair-and-improve fixture: a small game the AI must fix and whose haptic feedback a human must verify |
+| [`challenge/`](challenge/) | HPIB-S Sensation Challenge: catalogue of 21 sensations, record format and data policy for labs (draft) |
 | [`schemas/`](schemas/) | JSON Schemas for telemetry, capabilities and completion report |
 | [`templates/`](templates/) · [`examples/`](examples/) | Run manifest, human form, report template and examples |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed from v0.1 and why |

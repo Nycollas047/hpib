@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nycollas047/hpib/challenge/data/sensation-record.schema.json",
+  "title": "HPIB-S sensation record (draft v0.1)",
+  "description": "One pattern for one catalogue entry, with the evidence about how it feels. Human ratings are optional: a record without them is valid at level V0 to V2 and must not claim V4.",
+  "type": "object",
+  "required": ["record_id", "sensation_id", "split", "device", "commands", "produced_by", "verification", "license"],
+  "properties": {
+    "record_id": { "type": "string", "pattern": "^R-[A-Za-z0-9]{4,32}$" },
+    "sensation_id": { "type": "string", "pattern": "^S-[1-5][0-9]{2}$" },
+    "catalog_version": { "type": "string", "examples": ["0.1"] },
+    "split": { "enum": ["train", "dev", "private-test"] },
+    "device": {
+      "type": "object",
+      "required": ["capabilities_used"],
+      "properties": {
+        "capability_descriptor_ref": { "type": "string", "description": "Path or id of a document that validates against schemas/capability-descriptor.schema.json" },
+        "capabilities_used": { "type": "array", "items": { "enum": ["rumble", "adaptive_triggers", "imu", "touchpad", "trackpad_haptics"] }, "minItems": 1 }
+      }
+    },
+    "commands": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The pattern, as a time-ordered sequence of actuator commands.",
+      "items": {
+        "type": "object",
+        "required": ["t_ms", "actuator", "intensity", "duration_ms"],
+        "properties": {
+          "t_ms": { "type": "number", "minimum": 0 },
+          "actuator": { "type": "string", "examples": ["rumble_strong", "rumble_weak", "trigger_left", "trigger_right"] },
+          "intensity": { "type": "number", "minimum": 0, "maximum": 1 },
+          "frequency_hz": { "type": "number", "exclusiveMinimum": 0 },
+          "duration_ms": { "type": "number", "exclusiveMinimum": 0 }
+        }
+      }
+    },
+    "produced_by": {
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": { "enum": ["human_designer", "ai_agent"] },
+        "agent_config_ref": { "type": "string", "description": "Run manifest id (templates/run-manifest.yaml). Not shown to raters." }
+      }
+    },
+    "claim": { "type": "string", "description": "What the producer says it feels like." },
+    "verification": {
+      "type": "object",
+      "required": ["level"],
+      "properties": {
+        "level": { "enum": ["V0", "V1", "V2", "V3", "V4"] },
+        "claim_verdict": { "enum": ["confirmed", "partial", "refuted", "not_perceivable", "not_testable"] },
+        "ratings": {
+          "type": "array",
+          "description": "Pseudonymised blind ratings. Required (>= 5 raters) for level V4.",
+          "items": {
+            "type": "object",
+            "required": ["rater_id", "criterion", "score_1_5"],
+            "properties": {
+              "rater_id": { "type": "string", "pattern": "^P-[A-Za-z0-9]{3,16}$" },
+              "criterion": { "enum": ["C1", "C2", "C3", "C4", "C5", "C6", "C7"] },
+              "score_1_5": { "type": "integer", "minimum": 1, "maximum": 5 },
+              "discomfort_flag": { "type": "boolean" }
+            }
+          }
+        },
+        "identification": {
+          "type": "object",
+          "properties": {
+            "presented": { "type": "integer", "minimum": 1 },
+            "correct": { "type": "integer", "minimum": 0 }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "level": { "const": "V4" } } },
+          "then": { "required": ["ratings", "claim_verdict"], "properties": { "ratings": { "minItems": 5 } } }
+        }
+      ]
+    },
+    "license": { "type": "string", "examples": ["CC-BY-4.0"] }
+  },
+  "examples": [
+    {
+      "record_id": "R-example01",
+      "sensation_id": "S-104",
+      "catalog_version": "0.1",
+      "split": "dev",
+      "device": { "capabilities_used": ["rumble"] },
+      "commands": [
+        { "t_ms": 0, "actuator": "rumble_strong", "intensity": 0.4, "duration_ms": 60 },
+        { "t_ms": 90, "actuator": "rumble_weak", "intensity": 0.6, "duration_ms": 40 }
+      ],
+      "produced_by": { "kind": "human_designer" },
+      "claim": "Separate small hits, like walking on loose stones.",
+      "verification": { "level": "V1" },
+      "license": "CC-BY-4.0"
+    }
+  ]
+}
