@@ -4,6 +4,11 @@
 
 ## English
 
+### Unreleased — repair-and-improve fixture
+
+- Added `tasks/terrain-feedback/fixtures/carrinho-vs-ia/`: a game the agent must fix and whose haptic feedback it must improve; a human gives a verdict on each feedback claim (level V4). Includes `task.yaml` (variant `gceb.terrain-feedback.repair`), EN/PT-BR READMEs and `claim-verification.csv`. Draft, uncalibrated.
+- Added `challenge/` (HPIB-S Sensation Challenge): catalogue of 21 sensations in 5 levels, `sensation-record` schema and a data policy that keeps training data separate from the benchmark. Draft, uncalibrated, no data yet.
+
 ### v0.2 (draft) — consolidation of the v0.1 concept documents
 
 **Structure**
@@ -38,6 +43,11 @@
 - Robotics and medical research moved to *exploratory*, out of scope for v0.x.
 
 ## Português
+
+### Não lançado — fixture de consertar e melhorar
+
+- Adicionado `tasks/terrain-feedback/fixtures/carrinho-vs-ia/`: um jogo que o agente deve consertar e cujo feedback háptico deve melhorar; um humano dá um veredito sobre cada afirmação de feedback (nível V4). Inclui `task.yaml` (variante `gceb.terrain-feedback.repair`), READMEs EN/PT-BR e `claim-verification.csv`. Rascunho, sem calibração.
+- Adicionado `challenge/` (Desafio de Sensações HPIB-S): catálogo de 21 sensações em 5 níveis, esquema `sensation-record` e política de dados que separa os dados de treino do benchmark. Rascunho, sem calibração, sem dados ainda.
 
 ### v0.2 (rascunho) — consolidação dos documentos de concepção da v0.1
 

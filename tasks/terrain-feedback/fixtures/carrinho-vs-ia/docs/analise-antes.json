@@ -1,0 +1,11 @@
+{
+ "_nota": "Medido antes das mudanças desta rodada (mesmo script, mesmo mapa de 600 m).",
+ "moedas": { "faixaPct": { "estrada": 19.2, "perto_3_10": 32.5, "longe_10_18": 48.3 }, "valorMedio": 1.9, "emEncostaIngremePct": 3.6 },
+ "simulacao": {
+  "segue_estrada_so_pega_ate_8m": { "moedasEm3min": 9.9, "valorEm3min": 15.6, "batidasNoTrem": 0.8 },
+  "IA_enxerga_55m": { "moedasEm3min": 58.6, "valorEm3min": 115.4, "batidasNoTrem": 1.4, "origemPct": { "estrada": 18.1, "perto": 35.4, "longe": 46.5 } }
+ },
+ "trem": { "cruzamentoBloqueadoPct": [4.8, 5.2, 4.2, 5.1], "avisoAoJogador": "nenhum", "velocidade": "20 m/s nominal, ~20 a 27 m/s real (andava por ângulo)" },
+ "obstaculos": { "postesMaisPertoDoEixoM": 5, "folgaPostesM": -0.55, "perdaPorBatida": "x0,4 por quadro (travava)" },
+ "controle": "zona morta por eixo 0,2; sem curva; sem ré pelo controle; sem freio de mão, reset ou pausa; teclado 0/1"
+}
